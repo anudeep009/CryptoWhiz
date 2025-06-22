@@ -2,6 +2,11 @@ import mongoose, { Schema } from "mongoose";
 
 const watchlistSchema = new Schema(
   {
+    id: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     coin: {
       type: String,
       required: true,

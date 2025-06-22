@@ -2,7 +2,8 @@ import {Watchlist} from "../models/watchlist.model.js";
 
 const addCoin = async (req, res) => {
   const { data, userid } = req.body;
-
+  const { coinId, coin, current_price, low_24h, high_24h, image, userId } =
+    req.body;
   if (!data || !userid) {
     return res
       .status(400)
